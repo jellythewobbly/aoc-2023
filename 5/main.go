@@ -69,7 +69,8 @@ func bSearch(arr [][3]int64, val int64) int64 {
 		if val >= start && val <= end {
 			diff := arr[mid][0] - arr[mid][1]
 			return val + diff
-		} else if val < start {
+		}
+		if val < start {
 			high = mid - 1
 		} else {
 			low = mid + 1
